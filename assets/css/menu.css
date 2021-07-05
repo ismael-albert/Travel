@@ -1,0 +1,174 @@
+:root{
+    --main-text:#656666;
+    --background-menu:#F6F6F8;
+    --background:#E5E5E5;
+}
+header{
+   
+    width: 100%;
+    background-color: var(--background-menu);
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    
+  
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 83%;
+    border-bottom: 6px solid #38C1C9;
+    position: relative;
+}
+header a, li{
+    list-style: none;
+    text-decoration: none;
+    color: var(--main-text);
+}
+header a:hover{
+    color: #38C1C9;
+}
+.c-menu {
+
+    display: flex;
+    right: 0;
+    margin-top:3% ;
+   
+    width: 74%;
+    position:absolute;
+    z-index: 999;
+  
+   transition: 0.5s ease;
+}
+.c-menu__item:hover ul{
+    display: block;
+    
+    z-index: 999;
+}
+.c-menu__item:hover{
+    background: #F6F6F8;
+    border: 1px solid #C4C4C4;
+}
+.c-submenu__item{
+    display: none;
+  
+   
+}
+.c-menu__item a{
+width: 100%;
+}
+  
+    
+
+.c-menu__item {
+    margin: 0 auto;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    padding: 13px;
+   width: 80%;
+   
+}
+
+.c-submenu__item {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+   
+    transition: 1.3s ease;
+}
+
+.c-submenu__item li{
+   padding: 10px;
+   
+}
+
+/*Menu Mobile*/
+
+
+/*checked*/
+#icon__mobile--checked{
+    display: none;
+}
+#icon__mobile--checked:checked ~ label .icon__mobile:after{
+  transform: rotate(225deg);
+  
+
+  width: 70%;
+  height: 10px;
+
+  top: 45%;
+  left: 15%;
+}
+#icon__mobile--checked:checked ~ label .icon__mobile:before{
+    transform: rotate(-225deg);
+
+
+    top: 45%;
+    left: 15%;
+   
+    width: 70%;
+    height: 10px;
+  }
+/*------*/
+#icon__mobile--checked:checked ~ .c-menu{
+  right: 0;
+  }
+/*------*/
+.icon__mobile{
+    width: 50px;
+    height: 50px;
+   
+    border-radius: 10%;
+    border: 0;
+    position: relative;
+ display: none;
+}
+
+ 
+
+.icon__mobile:after{
+content: '';
+cursor: pointer;
+position: absolute;
+top: 30%;
+left: 15%;
+width: 70%;
+height: 10px;
+border-radius: 5px;
+background-color: rgb(63, 58, 58);
+transition: 1s ease;
+}
+.icon__mobile:before{
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    width: 40%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(63, 58, 58);
+    transition: 1s ease;
+    }
+
+
+
+    /*------RESPONSIVE-----*/
+
+    @media (max-width: 1024px) {
+        .icon__mobile{
+            display: block;
+            z-index: 999;
+        }
+     .c-menu{
+        
+         position: fixed;
+         top: 8%;
+         right: -100%;
+         height: 100vh;
+         width: 50%;
+         background-color: var(--background-menu);
+         flex-direction: column;
+        }
+
+
+    }
+    
