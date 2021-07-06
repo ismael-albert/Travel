@@ -5,7 +5,7 @@ Projeto de uma landing page feito com css3 e html5
 <br>
 -> Responsivo
 <br>
--> validação de formulário
+-> Validação de formulário
 
 -> LINK do projeto:  https://test-travel.vercel.app/
 <br>
